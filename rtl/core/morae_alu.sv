@@ -1,5 +1,5 @@
-module alu
-  import riscv_pkg::*;
+module morae_alu
+  import morae_pkg::*;
 (
   input  word_t   a,
   input  word_t   b,

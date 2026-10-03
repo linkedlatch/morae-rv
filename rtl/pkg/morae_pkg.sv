@@ -1,4 +1,4 @@
-package riscv_pkg;
+package morae_pkg;
 
   parameter int XLEN = 32;
   typedef logic [XLEN-1:0] word_t;
