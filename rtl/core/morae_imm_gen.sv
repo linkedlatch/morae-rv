@@ -13,7 +13,7 @@ module morae_imm_gen
       IMM_B:   imm = {{20{inst[31]}}, inst[7], inst[30:25], inst[11:8], 1'b0};
       IMM_U:   imm = {inst[31:12], 12'b0};
       IMM_J:   imm = {{12{inst[31]}}, inst[19:12], inst[20], inst[30:21], 1'b0};
-      default: imm = '0;
+      default: imm = 'x;
     endcase
   end
 

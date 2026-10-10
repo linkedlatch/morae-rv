@@ -16,14 +16,14 @@ module morae_alu
       ALU_ADD:  y = a + b;
       ALU_SUB:  y = a - b;
       ALU_SLL:  y = a << shamt;
-      ALU_SLT:  y = {{(XLEN-1){1'b0}}, $signed(a) < $signed(b)};
-      ALU_SLTU: y = {{(XLEN-1){1'b0}}, a < b};
+      ALU_SLT:  y = word_t'($signed(a) < $signed(b));
+      ALU_SLTU: y = word_t'(a < b);
       ALU_XOR:  y = a ^ b;
       ALU_SRL:  y = a >> shamt;
       ALU_SRA:  y = $signed(a) >>> shamt;
       ALU_OR:   y = a | b;
       ALU_AND:  y = a & b;
-      default:  y = '0;
+      default:  y = 'x;
     endcase
   end
 
