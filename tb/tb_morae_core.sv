@@ -7,7 +7,8 @@ module tb_morae_core;
   logic clk = 1'b0;
   logic rst_n;
 
-  word_t      imem_addr, imem_rdata;
+  word_t      imem_addr;
+  inst_t      imem_rdata;
   word_t      dmem_addr, dmem_wdata, dmem_rdata;
   logic [3:0] dmem_wstrb, mem_wstrb;
   logic       is_mmio;

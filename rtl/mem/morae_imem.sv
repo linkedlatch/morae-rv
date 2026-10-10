@@ -6,12 +6,12 @@ module morae_imem
   /* verilator lint_off UNUSEDSIGNAL */
   input  word_t addr,
   /* verilator lint_on UNUSEDSIGNAL */
-  output word_t rdata
+  output inst_t rdata
 );
 
   localparam int AW = $clog2(DEPTH);
 
-  word_t mem [DEPTH];
+  inst_t mem [DEPTH];
 
   initial begin
     string prog;

@@ -2,6 +2,7 @@ package morae_pkg;
 
   parameter int XLEN = 32;
   typedef logic [XLEN-1:0] word_t;
+  typedef logic [31:0]     inst_t;
   typedef logic [4:0]      reg_addr_t;
 
   typedef enum logic [3:0] {

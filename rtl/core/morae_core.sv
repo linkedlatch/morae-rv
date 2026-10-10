@@ -7,7 +7,7 @@ module morae_core
   input  logic       rst_n,
 
   output word_t      imem_addr,
-  input  word_t      imem_rdata,
+  input  inst_t      imem_rdata,
 
   output word_t      dmem_addr,
   output word_t      dmem_wdata,
@@ -16,7 +16,7 @@ module morae_core
 );
 
   word_t pc, pc_next, pc_plus4, pc_target;
-  word_t inst;
+  inst_t inst;
 
   reg_addr_t  rs1_addr, rs2_addr, rd_addr;
   logic [2:0] funct3;

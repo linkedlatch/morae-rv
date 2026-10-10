@@ -2,7 +2,7 @@ module morae_decoder
   import morae_pkg::*;
 (
   /* verilator lint_off UNUSEDSIGNAL */
-  input  word_t       inst,
+  input  inst_t       inst,
   /* verilator lint_on UNUSEDSIGNAL */
 
   output reg_addr_t   rs1_addr,
